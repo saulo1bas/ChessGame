@@ -18,7 +18,7 @@ public class Program {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		ChessMatch chessMatch = new ChessMatch();
-		List<ChessPiece> capturedPieces = new ArrayList<ChessPiece>();
+		List<ChessPiece> capturedPieces = new ArrayList<>();
 		while(true) {
 			try {
 				UI.clearScreen();
