@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
+
 
 import chess.ChessExpection;
 import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
-import chess.Color;
+
 
 public class Program {
 
@@ -42,6 +42,12 @@ public class Program {
 				//Adds captured piece to list of captured pieces
 				if(capturedPiece != null) {
 					capturedPieces.add(capturedPiece);
+				}
+				
+				if(chessMatch.getPromoted()!=null) {
+					System.out.println("Enter piece for promotion (B/N/R/Q):");
+					String piece = sc.nextLine();
+					chessMatch.replacePromotedPiece(piece);
 				}
 			}
 			catch(ChessExpection e) {
